@@ -1,22 +1,23 @@
 #include<stdio.h>
-#include<conio.h>
-struct book
+float midpt(float x,float y)
 {
-	char title[50];
-	int page;
-	float cost;
+	float m;
+	m=(x+y)/2;
+	return m;
+}
+struct coord
+{
+	float x,y;
 };
 void main()
 {
-	struct book b;
-	printf("\n enter the book title");
-	gets(b.title);
-	printf("\n enter the page");
-	scanf("%d",&b.page);
-	printf("\n enter the cost");
-	scanf("%f",&b.cost);
-	printf("\n Book Name = %s",b.title);
-	printf("\n Book Pages = %d",b.page);
-	printf("\n Book Cost = %.2f",b.cost);
-	getch();
+	struct coord c;
+	printf("\n enter the x coordinate");
+	scanf("%f",&c.x);
+	printf("\n enter the y coordinate");
+	scanf("%f",&c.y);
+	float q=midpt(c.x,c.y);
+	printf("\n X coordinate = %.2f",c.x);
+	printf("\n Y coordinate = %.2f",c.y);
+	printf("\n Mid-point = %.2f",q);
 }

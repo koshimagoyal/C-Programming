@@ -1,15 +1,12 @@
 #include<stdio.h>
-#include<conio.h>
 void main()
 {
-	int *p1,**p2;
-	double *q1,**q2;
-	char *c1;
-	float *f1;
-	clrscr();
-	printf("\n size of char pointer=%d",sizeof(c1));
-	printf("\n size of float pointer=%d",sizeof(f1));
-	printf("\n size of int pointer=%d\nsizeof int pointer to pointer=%d",sizeof(p1),sizeof(p2));
-	printf("\n size of double pointer=%d\nsizeof double pointer to pointer=%d",sizeof(q1),sizeof(q2));
-	getch();
+	int *p,a[5],i,sum=0;
+	printf("\n enter array elements");
+	for(i=0;i<5;i++)
+		scanf("%d",&a[i]);
+	p=&a[0];
+	for(i=0;i<5;i++)
+		sum+=*(p+i);
+	printf("\n sum=%d",sum);
 }
